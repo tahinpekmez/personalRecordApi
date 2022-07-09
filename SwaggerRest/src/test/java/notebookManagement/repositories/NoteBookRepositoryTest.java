@@ -37,8 +37,6 @@ class NoteBookRepositoryTest {
 
     @Test
     public void findOnenotebookById() {
-
-
         Optional<NoteBook> notebook = noteBookRepository.findById(3);
         assertEquals(true, notebook.isPresent(),"FindOne notebook didn't work");
         assertEquals("Dell Magic", notebook.get().getName(),"FindOne notebook didn't work");
@@ -56,7 +54,6 @@ class NoteBookRepositoryTest {
 
     @Test
     public void updatenotebook() {
-
         NoteBook notebook = new NoteBook(2,"LG Noteook",10000);
         NoteBook notebook2 = noteBookRepository.save(notebook);
 
@@ -68,9 +65,7 @@ class NoteBookRepositoryTest {
 
     @Test
     public void deletenotebook() {
-
         noteBookRepository.deleteById(4);
-
         assertFalse(noteBookRepository.existsById(4),"Delete record didn't work");
 
 
