@@ -25,7 +25,6 @@ class NoteBookRepositoryTest {
     private NoteBookRepository noteBookRepository;
 
 
-
     @Test
     void findAllWithSpecifPageNumberAndPageSize() {
         List<NoteBook> listnotebooks = noteBookRepository.findAll(PageRequest.of(0, 2, Sort.by("ID").ascending())).toList();
