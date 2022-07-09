@@ -10,9 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
-
 import javax.sql.DataSource;
-
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -49,7 +47,6 @@ class NoteBookControllerTest {
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$._embedded.noteBookList[0].id").value("4"))
                 .andExpect(jsonPath("$._embedded.noteBookList[1].id").value("5"));
-
     }
 
     @Test
@@ -60,9 +57,7 @@ class NoteBookControllerTest {
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$.id").value("2"))
                 .andExpect(jsonPath("$.name").value("HP Inspiron"));
-
     }
-
 
     @Test
     void getSingleNotExistingnotebookById() throws Exception {
