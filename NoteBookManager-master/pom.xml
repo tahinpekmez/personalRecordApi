@@ -64,6 +64,12 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-annotations-api</artifactId>
+            <version>9.0.56</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

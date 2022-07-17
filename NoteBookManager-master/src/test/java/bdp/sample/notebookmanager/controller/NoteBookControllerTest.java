@@ -14,6 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 
+import javax.activation.DataSource;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
