@@ -1,4 +1,4 @@
-package net.javaguides.springboot.springsecurity.controllers;
+package net.javaguides.springboot.springsecurity.web;
 
 import javax.validation.Valid;
 
@@ -50,4 +50,3 @@ public class UserRegistrationController {
     }
 
 }
-

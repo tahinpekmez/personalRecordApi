@@ -6,13 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import net.javaguides.springboot.springsecurity.service.UserService;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -29,12 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                             "/js/**",
                             "/css/**",
                             "/img/**",
-                            "/webjars/**",
-                            "/configuration/ui",
-                            "/swagger-resources/**",
-                            "/configuration/security",
-                            "/swagger-ui.html"
-                            ).permitAll()
+                            "/webjars/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .formLogin()
@@ -48,8 +41,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         .logoutSuccessUrl("/login?logout")
                 .permitAll();
     }
-
-
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
