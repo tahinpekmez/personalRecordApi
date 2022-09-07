@@ -1,4 +1,4 @@
-package com.example.teamso.entity;
+package com.example.personalRecord.entity;
 
 public enum Status {
     PERSONAL_ENTRANCE,

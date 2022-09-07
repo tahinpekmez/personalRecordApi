@@ -1,10 +1,10 @@
-package com.example.teamso.service;
+package com.example.personalRecord.service;
 
-import com.example.teamso.PersonalRepository.PersonalRepository;
-import com.example.teamso.controller.EAEController;
-import com.example.teamso.entity.PersonalData;
-import com.example.teamso.entity.PersonalDataDTO;
-import com.example.teamso.entity.Status;
+import com.example.personalRecord.PersonalRepository.PersonalRepository;
+import com.example.personalRecord.controller.EAEController;
+import com.example.personalRecord.entity.PersonalData;
+import com.example.personalRecord.entity.PersonalDataDTO;
+import com.example.personalRecord.entity.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

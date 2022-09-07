@@ -1,7 +1,6 @@
-package com.example.teamso.PersonalRepository;
+package com.example.personalRecord.PersonalRepository;
 
-import com.example.teamso.entity.PersonalData;
-import org.springframework.data.domain.Sort;
+import com.example.personalRecord.entity.PersonalData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

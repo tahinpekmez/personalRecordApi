@@ -1,4 +1,4 @@
-package com.example.teamso.entity;
+package com.example.personalRecord.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotNull;

@@ -1,10 +1,10 @@
-package com.example.teamso.controller;
+package com.example.personalRecord.controller;
 
-import com.example.teamso.PersonalRepository.PersonalRepository;
-import com.example.teamso.entity.PersonalData;
-import com.example.teamso.entity.PersonalDataDTO;
-import com.example.teamso.entity.Status;
-import com.example.teamso.service.PersonalService;
+import com.example.personalRecord.PersonalRepository.PersonalRepository;
+import com.example.personalRecord.entity.PersonalData;
+import com.example.personalRecord.entity.PersonalDataDTO;
+import com.example.personalRecord.entity.Status;
+import com.example.personalRecord.service.PersonalService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

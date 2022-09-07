@@ -1,4 +1,4 @@
-package com.example.teamso;
+package com.example.personalRecord;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

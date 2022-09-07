@@ -1,10 +1,8 @@
-package com.example.teamso.entity;
+package com.example.personalRecord.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Table;
 
 @AllArgsConstructor
 @Data

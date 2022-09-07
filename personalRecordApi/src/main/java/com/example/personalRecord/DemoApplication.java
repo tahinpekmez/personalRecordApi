@@ -1,4 +1,4 @@
-package com.example.teamso;
+package com.example.personalRecord;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
