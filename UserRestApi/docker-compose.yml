@@ -1,0 +1,37 @@
+version: '2.6.1'
+
+services:
+  #service 1: mysql database image creation
+  db:
+    image: mysql:5.6.17
+    container_name: mysql-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=Home3491*?
+    ports:
+      - "3306:3306"
+#    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+
+  # service 2: user app image creation
+  userservice:
+    image: user-service
+    container_name: user-service-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      db :
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/myData?createDatabaseIfNotExist=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Home3491*?
+
+

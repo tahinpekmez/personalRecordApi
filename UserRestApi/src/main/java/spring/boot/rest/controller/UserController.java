@@ -11,12 +11,11 @@ import spring.boot.rest.service.UserService;
 import spring.boot.rest.user.Role;
 import spring.boot.rest.user.Status;
 import spring.boot.rest.user.User;
-
-
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD, scripts = "classpath:beforeTestRun.sql")
 public class UserController {
     @Autowired
     UserRepository userRepository;
@@ -35,7 +34,7 @@ public class UserController {
 
 
     @CrossOrigin()
-    @PostMapping("/users/register")
+    @PostMapping("/users")
     public Status registerUser(@Valid @RequestBody User newUser) {
         List<User> users = userRepository.findAll();
 
@@ -83,7 +82,7 @@ public class UserController {
     }
 
     @CrossOrigin()
-    @DeleteMapping("/users/all")
+    @DeleteMapping("/users")
     public Status deleteUsers() {
         userRepository.deleteAll();
         return Status.SUCCESS;
